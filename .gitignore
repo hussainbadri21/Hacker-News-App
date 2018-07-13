@@ -18,3 +18,7 @@
 *.iml
 
 local\.properties
+
+\.gradle/4\.4/fileContent/
+
+\.gradle/4\.4/javaCompile/
