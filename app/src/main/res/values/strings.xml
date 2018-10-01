@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">HNY</string>
+    <string name="action_settings">Settings</string>
+    <string name="error_toast_msg">Looks like something went wrong. Try again.</string>
+    <string name="API_URL">https://hacker-news.firebaseio.com/v0/</string>
+    <string name="META_API_URL">https://api.urlmeta.org/</string>
+</resources>
