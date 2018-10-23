@@ -3,6 +3,7 @@ package com.example.hussain.hny.Activity
 import android.os.Bundle
 import android.content.Context
 import android.content.SharedPreferences
+import android.os.Build
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.*
@@ -11,6 +12,7 @@ import com.example.hussain.hny.API.Posts_API
 import com.example.hussain.hny.API_Response.PostsResponse
 import com.example.hussain.hny.Adapters.FeedAdapter
 import com.example.hussain.hny.R
+import com.example.hussain.hny.R.id.toolbar
 import com.example.hussain.hny.defaults.ActivityArchitecture
 import com.example.hussain.hny.defaults.AdapterArchitecture
 import com.example.hussain.hny.utils.RetrofitWrapper
@@ -35,9 +37,13 @@ class MainActivity : ActivityArchitecture() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
         onCreate()
-        main_layout.alpha = 0.3F
-        recycler.layoutManager = LinearLayoutManager(applicationContext)
-        fetchPostID()
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            scroll_bg.background = applicationContext.getDrawable(R.drawable.bg_shape)
+        }
+
+//        main_layout.alpha = 0.3F
+//        recycler.layoutManager = LinearLayoutManager(applicationContext)
+//        fetchPostID()
 
 
     }
